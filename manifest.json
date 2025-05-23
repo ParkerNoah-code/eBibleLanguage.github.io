@@ -1,0 +1,21 @@
+{
+  "name": "eBible Theology",
+  "short_name": "eBible",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#003366",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "cross_image.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "cross_image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
