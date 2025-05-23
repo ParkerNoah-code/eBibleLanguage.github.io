@@ -4,6 +4,7 @@ const URLS_TO_CACHE = [
   "./Styles.css",
   "./manifest.json",
   "./cross_image.png",
+  "./script.js",
 ];
 
 self.addEventListener("install", (event) => {
