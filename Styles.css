@@ -481,3 +481,71 @@ th {
   color: #fff;
   transform: rotateY(180deg);
 }
+
+details {
+  margin: 20px 0;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 10px 15px;
+}
+
+summary {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+/* Lesson List Styling */
+details ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+details li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+/* Checkbox and Label Layout */
+details input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #003366;
+  cursor: pointer;
+}
+
+details label {
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+details label a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+details label a:hover {
+  text-decoration: underline;
+}
