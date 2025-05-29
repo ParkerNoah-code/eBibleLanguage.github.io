@@ -29,8 +29,6 @@ const URLS_TO_CACHE = [
   "./Lessons/lesson22.html",
   "./Lessons/lesson23.html",
   "./Lessons/lesson24.html",
-  "./Lessons/Vocab.html",
-  "./Lessons/Cases.html",
 ];
 
 // Pre-cache static resources
