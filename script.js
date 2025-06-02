@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formQuestions.forEach((q, i) => {
       const div = document.createElement("div");
       div.classList.add("form-question");
-      div.innerHTML = `<p><strong>Question ${i + 1}:</strong> Select all <strong>${q.targetForm}</strong> forms.</p>`;
+      div.innerHTML = `<p><strong>Question ${i + 1}:</strong> Select <strong>${q.targetForm}</strong> forms.</p>`;
 
       q.options.forEach((opt, j) => {
         const id = `fm_${i}_${j}`;
