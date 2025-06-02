@@ -55,45 +55,74 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.getElementById("formMatchingQuiz").addEventListener("submit", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    let totalCorrect = 0;
-    let selectedCorrect = 0;
-    let missedCorrect = 0;
-    let incorrectSelected = 0;
+  let totalCorrect = 0;
+  let selectedCorrect = 0;
+  let missedCorrect = 0;
+  let incorrectSelected = 0;
 
-    const questions = document.querySelectorAll(".form-question");
+  const questions = document.querySelectorAll(".form-question");
+  const ambiguousForms = new Map();
 
-    questions.forEach((question) => {
-      const checkboxes = question.querySelectorAll("input[type='checkbox']");
-      checkboxes.forEach(cb => {
-        const label = question.querySelector(`label[for="${cb.id}"]`);
-        const isCorrect = cb.dataset.correct === "true";
-        label.classList.remove("correct", "incorrect", "missed");
-
-        if (isCorrect) totalCorrect++;
-
-        if (cb.checked && isCorrect) {
-          selectedCorrect++;
-          label.classList.add("correct");
-        } else if (cb.checked && !isCorrect) {
-          incorrectSelected++;
-          label.classList.add("incorrect");
-        } else if (!cb.checked && isCorrect) {
-          missedCorrect++;
-          label.classList.add("missed");
-        }
-      });
-    });
-
-    formFeedback.innerHTML = `
-      ✅ Correct: ${selectedCorrect} / ${totalCorrect} <br>
-      ⚠️ Overlooked: ${missedCorrect}<br>
-      ❌ Incorrect: ${incorrectSelected}
-    `;
-    formFeedback.style.display = "block";
-    resetBtn.style.display = "inline";
+  // Step 1: Build ambiguity map for all forms
+  formData.forEach(entry => {
+    const key = entry.textContent.trim();
+    const formLabel = entry.dataset.form;
+    if (!ambiguousForms.has(key)) {
+      ambiguousForms.set(key, new Set());
+    }
+    ambiguousForms.get(key).add(formLabel);
   });
+
+  // Step 2: Evaluate answers and collect ambiguity notices
+  let ambiguityNotices = [];
+
+  questions.forEach((question, qIndex) => {
+    const checkboxes = question.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(cb => {
+      const label = question.querySelector(`label[for="${cb.id}"]`);
+      const isCorrect = cb.dataset.correct === "true";
+      const labelText = label.textContent.trim();
+      const formLabels = ambiguousForms.get(labelText) || new Set();
+
+      label.classList.remove("correct", "incorrect", "missed");
+
+      if (isCorrect) totalCorrect++;
+
+      if (cb.checked && isCorrect) {
+        selectedCorrect++;
+        label.classList.add("correct");
+
+        if (formLabels.size > 1) {
+          const formattedForms = Array.from(formLabels).map(f => f.toLowerCase());
+          const readable = formattedForms.length === 2
+            ? formattedForms.join(" or ")
+            : formattedForms.slice(0, -1).join(", ") + ", or " + formattedForms.slice(-1);
+
+          ambiguityNotices.push(`🔍 The form <em>${labelText}</em> can be ${readable}.`);
+        }
+
+      } else if (cb.checked && !isCorrect) {
+        incorrectSelected++;
+        label.classList.add("incorrect");
+      } else if (!cb.checked && isCorrect) {
+        missedCorrect++;
+        label.classList.add("missed");
+      }
+    });
+  });
+
+  // Step 3: Display feedback with ambiguity notes
+  formFeedback.innerHTML = `
+    ✅ Correct: ${selectedCorrect} / ${totalCorrect} <br>
+    ⚠️ Overlooked: ${missedCorrect}<br>
+    ❌ Incorrect: ${incorrectSelected}
+    ${ambiguityNotices.length > 0 ? "<hr><strong>Note:</strong><br>" + ambiguityNotices.join("<br>") : ""}
+  `;
+  formFeedback.style.display = "block";
+  resetBtn.style.display = "inline";
+});
 
   resetBtn.addEventListener("click", (e) => {
     e.preventDefault(); // prevent unintended form action
