@@ -7,6 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const lessonCheckboxes = document.querySelectorAll("#lessons input[type='checkbox']");
+
+  // Load saved state from localStorage
+  lessonCheckboxes.forEach((checkbox) => {
+    const savedState = localStorage.getItem(checkbox.id);
+    if (savedState !== null) {
+      checkbox.checked = savedState === "true";
+    }
+
+    // Listen for changes and update localStorage
+    checkbox.addEventListener("change", () => {
+      localStorage.setItem(checkbox.id, checkbox.checked);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   // =====================
   // FORM MATCHING LOGIC
   // =====================
