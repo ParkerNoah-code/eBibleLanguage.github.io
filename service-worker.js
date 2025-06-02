@@ -32,6 +32,9 @@ const URLS_TO_CACHE = [
   "./Practice/Memorize1.html",
   "./Practice/Practice1.html",
   "./Practice/Commentary1.html",
+  "./Practice/Memorize2.html",
+  "./Practice/Practice2.html",
+  "./Practice/Commentary2.html",
 ];
 
 self.addEventListener("install", (event) => {
