@@ -481,3 +481,15 @@ th {
   color: #fff;
   transform: rotateY(180deg);
 }
+
+label.correct {
+  background-color: #d4edda; /* green */
+}
+
+label.incorrect {
+  background-color: #f8d7da; /* red */
+}
+
+label.missed {
+  background-color: #fff3cd; /* yellow */
+}
