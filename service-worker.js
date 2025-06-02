@@ -34,8 +34,8 @@ const URLS_TO_CACHE = [
   "./Practice/Commentary1.html",
 ];
 
-// Pre-cache static resources
 self.addEventListener("install", (event) => {
+  self.skipWaiting(); // ⬅ Forces activation immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(URLS_TO_CACHE);
@@ -43,7 +43,6 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Delete old caches during activation
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keyList) =>
@@ -54,9 +53,10 @@ self.addEventListener("activate", (event) => {
           }
         })
       )
-    )
+    ).then(() => self.clients.claim()) // ⬅ Take control of open pages
   );
 });
+
 
 // Fetch handler with split strategy
 self.addEventListener("fetch", (event) => {
@@ -81,5 +81,11 @@ self.addEventListener("fetch", (event) => {
         return cachedResponse || fetch(event.request);
       })
     );
+  }
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
   }
 });

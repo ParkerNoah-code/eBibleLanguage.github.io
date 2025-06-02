@@ -246,22 +246,45 @@
     </div>
 
     <script>
-      document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
-        const stored = localStorage.getItem(cb.id);
-        if (stored) cb.checked = stored === "true";
-
-        cb.addEventListener("change", () => {
-          localStorage.setItem(cb.id, cb.checked);
-        });
-      });
-
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("./service-worker.js")
-          .then((reg) => console.log("Service Worker registered.", reg))
+          .then((reg) => {
+            console.log("Service Worker registered.", reg);
+
+            // Force update check on each load
+            reg.update();
+
+            // Listen for updates to activate and then reload
+            if (reg.waiting) {
+              reg.waiting.postMessage({ type: "SKIP_WAITING" });
+            }
+
+            reg.addEventListener("updatefound", () => {
+              const newWorker = reg.installing;
+              newWorker.addEventListener("statechange", () => {
+                if (
+                  newWorker.state === "installed" &&
+                  navigator.serviceWorker.controller
+                ) {
+                  console.log("New content available. Reloading...");
+                  window.location.reload();
+                }
+              });
+            });
+          })
           .catch((err) =>
             console.error("Service Worker registration failed:", err)
           );
+
+        // Listen for skipWaiting message
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (!refreshing) {
+            window.location.reload();
+            refreshing = true;
+          }
+        });
       }
     </script>
   </body>
