@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>eBibleLanguage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles.css" />
+    <link rel="icon" href="../cross_image.ico" />
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="theme-color" content="#003366" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="eBibleLanguage" />
+    <link rel="apple-touch-icon" href="../cross_image.png" />
+    <link
+      rel="apple-touch-startup-image"
+      href="../cross_image.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <p>
+          <a href="../FastTrack.html">Lessons</a> &gt;
+          <a href="../Memory/Alphabet.html">Alphabet </a>
+        </p>
+      </nav>
+      <h1>Alphabet</h1>
+      <table>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+        <tr>
+          <td>Alpha (Α α)</td>
+          <td>Beta (Β β)</td>
+          <td>Gamma (Γ γ)</td>
+          <td>Delta (Δ δ)</td>
+        </tr>
+        <tr>
+          <td>Epsilon (Ε ε)</td>
+          <td>Zeta (Ζ ζ)</td>
+          <td>Eta (Η η)</td>
+          <td>Theta (Θ θ)</td>
+        </tr>
+        <tr>
+          <td>Iota (Ι ι)</td>
+          <td>Kappa (Κ κ)</td>
+          <td>Lambda (Λ λ)</td>
+          <td>Mu (Μ μ)</td>
+        </tr>
+        <tr>
+          <td>Nu (Ν ν)</td>
+          <td>Xi (Ξ ξ)</td>
+          <td>Omicron (Ο ο)</td>
+          <td>Pi (Π π)</td>
+        </tr>
+        <tr>
+          <td>Rho (Ρ ρ)</td>
+          <td>Sigma (Σ σ/ς)</td>
+          <td>Tau (Τ τ)</td>
+          <td>Upsilon (Υ υ)</td>
+        </tr>
+        <tr>
+          <td>Phi (Φ φ)</td>
+          <td>Chi (Χ χ)</td>
+          <td>Psi (Ψ ψ)</td>
+          <td>Omega (Ω ω)</td>
+        </tr>
+      </table>
+
+      <h3>Diphthongs</h3>
+      <table>
+        <tr>
+          <th>Diphthong</th>
+          <th>Pronunciation</th>
+          <th>English Equivalent</th>
+        </tr>
+        <tr>
+          <td><strong>αι</strong></td>
+          <td>“eye”</td>
+          <td>as in <em>aisle</em></td>
+        </tr>
+        <tr>
+          <td><strong>αυ</strong></td>
+          <td>“ow”</td>
+          <td>as in <em>kraut</em></td>
+        </tr>
+        <tr>
+          <td><strong>ει</strong></td>
+          <td>“ay”</td>
+          <td>as in <em>freight</em></td>
+        </tr>
+        <tr>
+          <td><strong>ευ</strong></td>
+          <td>“yew”</td>
+          <td>as in <em>feud</em></td>
+        </tr>
+        <tr>
+          <td><strong>οι</strong></td>
+          <td>“oi”</td>
+          <td>as in <em>oil</em></td>
+        </tr>
+        <tr>
+          <td><strong>ου</strong></td>
+          <td>“oo”</td>
+          <td>as in <em>soup</em></td>
+        </tr>
+        <tr>
+          <td><strong>υι</strong></td>
+          <td>“we”</td>
+          <td>as in <em>suite</em></td>
+        </tr>
+        <tr>
+          <td><strong>ηυ</strong></td>
+          <td>“ay-oo” (rare)</td>
+          <td>“ay-OO-lo-geh-sen”</td>
+        </tr>
+        <tr>
+          <td><strong>ωυ</strong></td>
+          <td>“ō-oo”</td>
+          <td>sounded out</td>
+        </tr>
+        <tr>
+          <td><strong>ιη</strong></td>
+          <td>“ee-ay” → “yea”</td>
+          <td>as in <em>yeast</em></td>
+        </tr>
+      </table>
+    </div>
+    <script src="../script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then((reg) => console.log("Service Worker registered.", reg))
+          .catch((err) =>
+            console.error("Service Worker registration failed:", err)
+          );
+      }
+    </script>
+  </body>
+</html>
