@@ -1,0 +1,164 @@
+/* Typography and Reset */
+body {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout Container */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Header and Nav */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+nav a {
+  color: white;
+  margin: 0 0.75em;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+}
+h2,
+h3 {
+  color: #003366;
+  margin-top: 2rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.25rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+table th,
+table td {
+  border: 1px solid #aaa;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+table th {
+  background-color: #dde8f0;
+  font-weight: bold;
+}
+
+/* Flashcards */
+.flashcard {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 140px;
+  height: 80px;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  backface-visibility: hidden;
+  transition: transform 0.4s ease;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(360deg);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 150px;
+    height: 90px;
+  }
+
+  .card .front,
+  .card .back {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+}

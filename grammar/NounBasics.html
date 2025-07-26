@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>eBibleLanguage</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Styles.css" />
-    <link rel="icon" href="../cross_image.ico" />
-    <meta name="theme-color" content="#003366" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="eBibleLanguage" />
-    <link rel="apple-touch-icon" href="../cross_image.png" />
-    <link
-      rel="apple-touch-startup-image"
-      href="../cross_image.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
-    />
+    <title>Noun Basics</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <div class="content">
+    <header>
+      <h1>Noun Basics</h1>
       <nav>
-        <p>
-          <a href="../About.html">About</a> >
-          <a href="../Notes.html">Notes</a> >
-          <a href="BasicNouns.html">Basic Nouns</a>
-        </p>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
       </nav>
+    </header>
 
-      <h2>Basic Nouns</h2>
+    <main>
+      <h2>Understanding Nouns</h2>
       <p>
         Nouns have three declensions (patterns) of word endings to learn. The
         first and second declensions are explained here. Greek noun endings
@@ -38,7 +26,7 @@
         noun is singular or plural.
       </p>
 
-      <h3>First Declension Nouns</h3>
+      <h2>First Declension Nouns</h2>
       <p>
         The first declension is used for most feminine nouns. There are two main
         types of feminine nouns, either η-ending or α-ending. The plural endings
@@ -202,94 +190,69 @@
         there are multiple possible translations. The context usually makes
         clear which sense of the word was intended by the author.
       </p>
-
-      <div id="flashcards" class="flashcard-grid">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἀγάπη, ἡ</div>
-            <div class="card-face card-back">love</div>
-          </div>
+      <div class="flashcard">
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἀγάπη, ἡ</div>
+          <div class="back">love</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ζωή, ἡ</div>
-            <div class="card-face card-back">life</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ζωή, ἡ</div>
+          <div class="back">life</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἀλήθεια, ἡ</div>
-            <div class="card-face card-back">truth</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἀλήθεια, ἡ</div>
+          <div class="back">truth</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἁμαρτία, ἡ</div>
-            <div class="card-face card-back">sin</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἁμαρτία, ἡ</div>
+          <div class="back">sin</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">βασιλεία, ἡ</div>
-            <div class="card-face card-back">kingdom</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">βασιλεία, ἡ</div>
+          <div class="back">kingdom</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἐκκλησία, ἡ</div>
-            <div class="card-face card-back">assembly, church</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἐκκλησία, ἡ</div>
+          <div class="back">assembly, church</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">σωτηρία, ἡ</div>
-            <div class="card-face card-back">salvation</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">σωτηρία, ἡ</div>
+          <div class="back">salvation</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">παραβολή, ἡ</div>
-            <div class="card-face card-back">parable</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">παραβολή, ἡ</div>
+          <div class="back">parable</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">μαρτυρία, ἡ</div>
-            <div class="card-face card-back">testimony, witness</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">μαρτυρία, ἡ</div>
+          <div class="back">testimony, witness</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">χαρά, ἡ</div>
-            <div class="card-face card-back">joy</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">χαρά, ἡ</div>
+          <div class="back">joy</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἀδικία, ἡ</div>
-            <div class="card-face card-back">unrighteousness</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἀδικία, ἡ</div>
+          <div class="back">unrighteousness</div>
         </div>
 
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">καρδία, ἡ</div>
-            <div class="card-face card-back">heart</div>
-          </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">καρδία, ἡ</div>
+          <div class="back">heart</div>
         </div>
       </div>
 
-      <h3>Second Declension Nouns</h3>
+      <h2>Second Declension Nouns</h2>
       <p>
         The second declension encompasses most masculine and neuter nouns and is
         characterized by a set of distinct and regular endings. Masculine second
@@ -370,78 +333,65 @@
       </table>
 
       <h3>Masculine Vocabulary</h3>
-      <div id="flashcards" class="flashcard-grid">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">βίος, ὁ</div>
-            <div class="card-face card-back">life, livelihood</div>
-          </div>
+      <div class="flashcard">
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">βίος, ὁ</div>
+          <div class="back">life, livelihood</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἔχθρος, ὁ</div>
-            <div class="card-face card-back">enemy, adversary</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἔχθρος, ὁ</div>
+          <div class="back">enemy, adversary</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">θρόνος, ὁ</div>
-            <div class="card-face card-back">throne</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">θρόνος, ὁ</div>
+          <div class="back">throne</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">οἶκος, ὁ</div>
-            <div class="card-face card-back">house, household</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">οἶκος, ὁ</div>
+          <div class="back">house, household</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ὄχλος, ὁ</div>
-            <div class="card-face card-back">crowd, multitude</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ὄχλος, ὁ</div>
+          <div class="back">crowd, multitude</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">παραλυτικός, ὁ</div>
-            <div class="card-face card-back">paralytic, paralyzed person</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">παραλυτικός, ὁ</div>
+          <div class="back">paralytic, paralyzed person</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">πρεσβύτερος, ὁ</div>
-            <div class="card-face card-back">elder, presbyter</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">πρεσβύτερος, ὁ</div>
+          <div class="back">elder, presbyter</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">στρατιώτης, ὁ</div>
-            <div class="card-face card-back">soldier</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">στρατιώτης, ὁ</div>
+          <div class="back">soldier</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">τόπος, ὁ</div>
-            <div class="card-face card-back">place, location</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">τόπος, ὁ</div>
+          <div class="back">place, location</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">φόβος, ὁ</div>
-            <div class="card-face card-back">fear, reverence</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">φόβος, ὁ</div>
+          <div class="back">fear, reverence</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">χρόνος, ὁ</div>
-            <div class="card-face card-back">time, period</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">χρόνος, ὁ</div>
+          <div class="back">time, period</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">φίλος, ὁ</div>
-            <div class="card-face card-back">friend</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">φίλος, ὁ</div>
+          <div class="back">friend</div>
         </div>
       </div>
 
@@ -512,78 +462,65 @@
       </table>
 
       <h3>Neuter Vocabulary</h3>
-      <div id="flashcards" class="flashcard-grid">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἀργύριον, τό</div>
-            <div class="card-face card-back">silver, money</div>
-          </div>
+      <div class="flashcard">
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἀργύριον, τό</div>
+          <div class="back">silver, money</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">βιβλίον, τό</div>
-            <div class="card-face card-back">book, scroll</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">βιβλίον, τό</div>
+          <div class="back">book, scroll</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">δαιμόνιον, τό</div>
-            <div class="card-face card-back">demon, evil spirit</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">δαιμόνιον, τό</div>
+          <div class="back">demon, evil spirit</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ἔθνος, τό</div>
-            <div class="card-face card-back">nation, people, Gentile</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ἔθνος, τό</div>
+          <div class="back">nation, people, Gentile</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">θέλημα, τό</div>
-            <div class="card-face card-back">will, desire</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">θέλημα, τό</div>
+          <div class="back">will, desire</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">ὄνομα, τό</div>
-            <div class="card-face card-back">name, reputation</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">ὄνομα, τό</div>
+          <div class="back">name, reputation</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">παιδίον, τό</div>
-            <div class="card-face card-back">little child, infant</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">παιδίον, τό</div>
+          <div class="back">little child, infant</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">πλοῖον, τό</div>
-            <div class="card-face card-back">boat, ship</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">πλοῖον, τό</div>
+          <div class="back">boat, ship</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">πρόβατον, τό</div>
-            <div class="card-face card-back">sheep</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">πρόβατον, τό</div>
+          <div class="back">sheep</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">σῶμα, τό</div>
-            <div class="card-face card-back">body</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">σῶμα, τό</div>
+          <div class="back">body</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">τέλος, τό</div>
-            <div class="card-face card-back">end, goal, outcome</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">τέλος, τό</div>
+          <div class="back">end, goal, outcome</div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-face card-front" lang="grc">φῶς, τό</div>
-            <div class="card-face card-back">light</div>
-          </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="front">φῶς, τό</div>
+          <div class="back">light</div>
         </div>
       </div>
 
@@ -656,8 +593,11 @@
         God give it to? The dative form τῇ καρδίᾳ tells us. Translation: God
         gives joy to the heart.
       </p>
-    </div>
+    </main>
 
-    <script src="../script.js"></script>
+    <footer>
+      <p>&copy; 2025 eBibleLanguage</p>
+    </footer>
+    <script defer src="../script.js"></script>
   </body>
 </html>
