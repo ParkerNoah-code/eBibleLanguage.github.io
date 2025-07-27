@@ -1,7 +1,7 @@
 /* Typography and Reset */
 body {
   font-family: "EB Garamond", serif;
-  font-size: clamp(18px, 4vw, 20px);
+  font-size: 18px;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #222;
