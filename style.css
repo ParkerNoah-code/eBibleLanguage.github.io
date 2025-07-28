@@ -193,8 +193,8 @@ table th {
   }
 
   nav a {
-    display: inline-block; /* Force inline horizontal layout */
-    font-size: 0.95rem; /* Slightly smaller text */
+    display: inline-block;
+    font-size: 0.85rem;
     margin: 0 0.25em;
     padding: 0.2em 0.4em;
   }
