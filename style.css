@@ -200,8 +200,9 @@ table th {
   }
 
   main {
+    margin: 1rem auto;
     padding: 0 1.5rem;
-    width: 100%;
+    width: calc(100% - 3rem);
   }
 
   h2,
