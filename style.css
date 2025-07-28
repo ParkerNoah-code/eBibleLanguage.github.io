@@ -170,29 +170,43 @@ table th {
 
 @media (max-width: 480px) {
   body {
-    font-size: 18.5px; /* Slightly larger for retina clarity */
+    font-size: 17px; /* Slightly reduced for compact view */
     margin: 0;
     padding: 0;
   }
 
-  main {
-    padding: 0 0.25rem; /* ~4px padding on each side */
-    width: 100%;
-  }
-
-  nav a {
-    display: block;
-    margin: 0.3em 0;
-    font-size: 1rem;
+  header {
+    padding: 0.75rem 0.5rem; /* Shorter header height */
   }
 
   header h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem; /* Smaller font for mobile */
+    margin-bottom: 0.25rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  nav a {
+    display: inline-block; /* Force inline horizontal layout */
+    font-size: 0.95rem; /* Slightly smaller text */
+    margin: 0 0.25em;
+    padding: 0.2em 0.4em;
+  }
+
+  main {
+    padding: 0 0.25rem;
+    width: 100%;
   }
 
   h2,
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .card {
