@@ -170,7 +170,7 @@ table th {
 
 @media (max-width: 600px) {
   .image-row img {
-    max-width: 130px;
+    max-width: 140px;
     flex: 1 1 calc(45% - 1rem);
   }
 }
