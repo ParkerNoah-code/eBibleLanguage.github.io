@@ -149,6 +149,18 @@ table th {
   transform: rotateY(360deg);
 }
 
+details summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: #dde8f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+details[open] summary {
+  background-color: #c6d8ea;
+}
+
 /* Image Grid */
 .image-row {
   display: flex;
