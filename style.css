@@ -180,6 +180,16 @@ details[open] summary {
   border-radius: 6px;
 }
 
+.noun {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+.verb {
+  background-color: rgba(255, 99, 71, 0.2);
+}
+.pt-if {
+  background-color: rgba(60, 179, 113, 0.2);
+}
+
 @media (max-width: 600px) {
   .image-row img {
     max-width: 140px;
