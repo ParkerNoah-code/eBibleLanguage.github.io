@@ -77,13 +77,25 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Table Styling */
+.table-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
 table {
-  width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  overflow-x: auto;
-  display: block;
+  margin: 0.5rem 0;
+  display: table;
+  width: auto;
+  max-width: 100%;
 }
 
 table th,
@@ -178,16 +190,6 @@ details[open] summary {
   flex: 1 1 calc(33.333% - 1rem);
   box-sizing: border-box;
   border-radius: 6px;
-}
-
-.noun {
-  background-color: rgba(0, 123, 255, 0.2);
-}
-.verb {
-  background-color: rgba(255, 99, 71, 0.2);
-}
-.pt-if {
-  background-color: rgba(60, 179, 113, 0.2);
 }
 
 @media (max-width: 600px) {
